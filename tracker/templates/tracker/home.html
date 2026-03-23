@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF -8">
+<title>
+CB health & wellness
+</title>
+<link rel="stylesheet" href="{%static 'css/style.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Meie+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Meie+Script&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+</head>
+  <!-- Hero Section -->
+   <header class="header">
+    <div class="logo">
+        <img src="{% static 'images/CB.png'%}" alt="Health & Wellness logo">
+    </div>
+    <nav class="nav-links" aria-label="Main">
+          <ul>
+        <li><a href="/" aria-label="wellness">Wellness</a></li>
+        <li><a href="/" aria-label="fitness">Fitness</a></li>
+        <li><a href="/" aria-label="nutrition">about us</a></li>
+        <li><a href="/" aria-label="community">health</a></li>
+    </ul>
+    </nav>
+   </header>
+   <!--vedio section-->
+<section class="hero-focus">
+    <div class="hero-container">
+        
+        <div class="gif-bg">
+            <img src="{% static 'images/yoga.gif' %}" alt="Wellness GIF">
+        </div>
+
+        <div class="hero-focus-text">
+            <p class="hero-quote">
+                <span class="script">food</span> is fuel,<br>
+                <span class="script">sleep</span> is healing,<br>
+                <span class="script">breath</span> is power,<br>
+                <span class="script">nature</span> is therapy,<br>
+                <span class="script">rest</span> is productive,<br>
+                <span class="script">movement</span> is medicine
+            </p>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

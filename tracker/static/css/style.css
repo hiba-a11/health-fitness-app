@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+}
+
+/* Navigation list styling */
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px; /* space between items */
+}
+
+.nav-links a {
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-decoration: solid;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0c503c;
+    font-family: 'Meie Script', cursive; /* <-- your Google font */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f005c9; /* accent color */
+}
+
+/* HEADER STYLES */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(197, 241, 210);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.header .nav-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.header .nav-links a:hover {
+    color: #26a69a; /* accent color */
+}
+
+.header .cta-btn {
+    background-color: #26a69a;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.header .logo img{
+    height: 90px;
+    width: auto;
+}
+
+
+/* HERO SECTION SIDE BY SIDE */
+.hero-focus {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    height: 100%;
+}
+
+/* GIF takes 70% */
+.gif-bg {
+    flex: 7;
+}
+
+.gif-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT takes 30% */
+.hero-focus-text {
+    flex: 3;
+    display: flex;
+    align-items: center;   /* vertical center */
+    justify-content: center;
+    padding: 40px;
+    background-color:rgb(243, 245, 244); 
+}
+
+/* QUOTE STYLE */
+.hero-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #222;
+}
+
+/* SCRIPT WORDS */
+.script {
+    font-family: 'Meie Script', cursive;
+    font-size: 2.2rem;
+}
