@@ -2,36 +2,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF -8">
-<title>
-CB health & wellness
-</title>
-<link rel="stylesheet" href="{%static 'css/style.css' %}">
+<meta charset="UTF-8">
+<title>CB Health & Wellness</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}?v=3">
 <link href="https://fonts.googleapis.com/css2?family=Meie+Script&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Meie+Script&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
 </head>
-  <!-- Hero Section -->
-   <header class="header">
-    <div class="logo">
-        <img src="{% static 'images/CB.png'%}" alt="Health & Wellness logo">
-    </div>
-    <nav class="nav-links" aria-label="Main">
-          <ul>
-        <li><a href="/" aria-label="wellness">Wellness</a></li>
-        <li><a href="/" aria-label="fitness">Fitness</a></li>
-        <li><a href="/" aria-label="nutrition">about us</a></li>
-        <li><a href="/" aria-label="community">health</a></li>
-    </ul>
-    </nav>
-   </header>
-   <!--vedio section-->
-<section class="hero-focus">
-    <div class="hero-container">
-        
-        <div class="gif-bg">
-            <img src="{% static 'images/yoga.gif' %}" alt="Wellness GIF">
-        </div>
 
+<body>
+
+<!-- === Header === -->
+<header class="header">
+    <div class="logo">
+        <img src="{% static 'images/CB.png' %}" alt="CB Health & Wellness Logo">
+    </div>
+    <nav class="nav-links" aria-label="Main Navigation">
+        <ul>
+            <li><a href="/" aria-label="Wellness">Wellness</a></li>
+            <li><a href="/" aria-label="Fitness">Fitness</a></li>
+            <li><a href="/" aria-label="About Us">About Us</a></li>
+            <li><a href="/" aria-label="Health">Health</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- === Hero Section === -->
+<section class="hero-focus">
+    <div class="container hero-container">
+        <div class="gif-bg">
+            <img src="{% static 'images/hero3.gif' %}" alt="Wellness GIF">
+          
+        </div>
         <div class="hero-focus-text">
             <p class="hero-quote">
                 <span class="script">food</span> is fuel,<br>
@@ -42,8 +44,264 @@ CB health & wellness
                 <span class="script">movement</span> is medicine
             </p>
         </div>
-
     </div>
 </section>
+
+<!-- === CB Niche Section === -->
+<section class="why-section luxury-90s">
+    <div class="container why-container">
+        <div class="why-content">
+            <!-- Left Text -->
+            <div class="why-text">
+                <h2 class="cb-niche-title">
+                    CB;<br>
+                    a niche magazine to help the niche girlies understand and take over their anatomy
+                </h2>
+                <p class="why-subtitle">
+                    A curated space to understand your body, elevate your mind, and refine your essence
+                </p>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <span class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                                <path d="M440-80v-166L310-118l-56-56 186-186v-80h-80L174-254l-56-56 128-130H80v-80h166L118-650l56-56 186 186h80v-80L254-786l56-56 130 128v-166h80v166l130-128 56 56-186 186v80h80l186-186 56 56-128 130h166v80H714l128 130-56 56-186-186h-80v80l186 186-56 56-130-128v166h-80Z"/>
+                            </svg>
+                        </span>
+                        <h3>holistic approach</h3>
+                        <p>We blend wellbeing, nutrition, and movement—essentials for your body to achieve a flow state</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                                <path d="M440-80v-166L310-118l-56-56 186-186v-80h-80L174-254l-56-56 128-130H80v-80h166L118-650l56-56 186 186h80v-80L254-786l56-56 130 128v-166h80v166l130-128 56 56-186 186v80h80l186-186 56 56-128 130h166v80H714l128 130-56 56-186-186h-80v80l186 186-56 56-130-128v166h-80Z"/>
+                            </svg>
+                        </span>
+                        <h3>accessible luxury</h3>
+                        <p>No toxic motivation, no gimmicks—just tailored guidance for your personal journey</p>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                                <path d="M440-80v-166L310-118l-56-56 186-186v-80h-80L174-254l-56-56 128-130H80v-80h166L118-650l56-56 186 186h80v-80L254-786l56-56 130 128v-166h80v166l130-128 56 56-186 186v80h80l186-186 56 56-128 130h166v80H714l128 130-56 56-186-186h-80v80l186 186-56 56-130-128v166h-80Z"/>
+                            </svg>
+                        </span>
+                        <h3>crafted for the niche</h3>
+                        <p>Personalized insights to expand your knowledge and refine your wellness experience</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right GIF -->
+            <div class="why-image">
+                <div class="gif-wrapper">
+                    <img src="{% static 'images/hero4.gif' %}" alt="luxury wellness" />
+                    <div class="pastel-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- === Movement & More Section === -->
+<section class="movement-section">
+    <div class="movement-container">
+        <h2 class="movement-title">Movement & More</h2>
+        <p class="movement-subtitle">
+            Come for the workouts, stay for the variety. From soothing sound baths and self-care practices to healthy recipes and meditations, find all your wellness needs here.
+        </p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{% static 'images/bmi.jpg' %}" alt="Health Calculators">
+                </div>
+                <h3>Health Calculators</h3>
+                <p>Calculate BMI, body fat, and more to track your wellness journey.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{% static 'images/mind.jpg' %}" alt="Mindfulness Blogs">
+                </div>
+                <h3>Mindfulness Blogs</h3>
+                <p>Read tips, techniques, and stories to improve your mental wellness.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{% static 'images/running.jpg' %}" alt="Body Movements">
+                </div>
+                <h3>Body Movements</h3>
+                <p>Explore guided workouts, stretching routines, and movement practices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-section">
+  <div class="about-container">
+
+    <div class="about-header">
+      <h2 class="about-title">why CB Wellness works</h2>
+      <p class="about-description">
+        At CB Wellness we combine science, experience, and holistic understanding to help you build habits that feel intuitive, empowered, and lasting.
+      </p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-card">
+        <h3>Evidence‑Backed Guidance</h3>
+        <p>We blend research with real‑world practices so your wellness journey is supportive and sustainable.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>Personalized Experience</h3>
+        <p>Every body and mind is unique — your plans, suggestions, and goals are too.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>Holistic at Every Step</h3>
+        <p>Movement, nourishment, sleep, and mindset — all connected and balanced.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>Community‑First Support</h3>
+        <p>We hold space for encouragement, shared learning, and real connection.</p>
+      </div>
+
+    </div>
+    
+  </div>
+</section>
+
+<section class="founder-story">
+  <div class="founder-container">
+
+    <div class="founder-content-wrapper">
+
+      <!-- Text on the left -->
+      <div class="founder-text">
+        <div class="founder-header">
+          <h2 class="founder-title">Hi, I’m Hiva</h2>
+          <p class="founder-subtitle">
+            I struggled with body image for years. Even when I was healthy, I couldn't love my body because everyone around me gaslighted the concept of body positivity. To feel confident, I realized I needed to confront discomfort and actively decide to change.
+          </p>
+        </div>
+        <div class="founder-content">
+          <p>
+            This website was born from my journey: learning about my anatomy, understanding my body’s needs, and using research to make informed choices about how I want to change. It's a space to empower others to explore their wellness and take control of their bodies, minds, and health.
+          </p>
+          <blockquote>
+            "To feel confident, you must be uncomfortable and decide to change."
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Circular image on the right -->
+      <div class="founder-image">
+        <div class="founder-img-wrapper">
+          <img src="{% static 'images/me.gif' %}" alt="Animated Hiba">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <div class="testimonials-container">
+    <h2 class="section-title">What Our Niche Girlies Say</h2>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>"Learning about my body changed my life. CB Niche made wellness feel luxurious and approachable."</p>
+        <span class="testimonial-author">— Chloe, 22</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>"Finally, a space that understands my struggles with fitness and body image."</p>
+        <span class="testimonial-author">— Amira, 24</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>"The mindfulness tips and movement guides are so easy to follow, yet so effective."</p>
+        <span class="testimonial-author">— Sofia, 20</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-section">
+  <div class="blog-container">
+    <h2 class="section-title">Explore Our Blog</h2>
+    
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="{% static 'images/hero3.gif' %}" alt="Mindful Eating">
+        </div>
+        <h3>Mindful Eating Tips</h3>
+        <p>Learn to enjoy food without guilt and improve your relationship with your body.</p>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="{% static 'images/hero3.gif' %}" alt="Stretch & Flow">
+        </div>
+        <h3>Stretch & Flow Routines</h3>
+        <p>Simple movements to energize your day and release tension in your body.</p>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="{% static 'images/hero3.gif' %}" alt="Self-Care Practices">
+        </div>
+        <h3>Self-Care Practices</h3>
+        <p>Discover daily rituals that boost confidence, wellness, and self-love.</p>
+      </div>
+    </div>
+  </div>
+</section> 
+ 
+<section class="anatomy-section">
+  <div class="anatomy-container">
+    <div class="anatomy-text">
+      <h2 class="section-title">Know Your Body</h2>
+      <p>Interactive guide to explore body movements and understand anatomy. Click to learn more.</p>
+    </div>
+    <div class="anatomy-image">
+      <div class="anatomy-circle">
+        <img src="{% static 'images/hero1.gif' %}" alt="Animated Hiba">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <div class="cta-container">
+    <h2 class="cta-title">Explore Your Wellness Journey</h2>
+    <p class="cta-subtitle">Start your self-care routine and discover a healthier, happier you.</p>
+    <a href="#movement-section" class="cta-button">Get Started</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#movement-section">Movement</a>
+      <a href="#">Contact</a>
+    </div>
+    
+    <p class="footer-copy">&copy; 2026 CB Health & Wellness. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
 </body>
 </html>

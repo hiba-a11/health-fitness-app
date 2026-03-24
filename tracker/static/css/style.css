@@ -1,122 +1,825 @@
-/* General Styles */
+/* === Global Styles === */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #333;
-    text-align: center;
+    background-color: #fdf6f0;
+    color: #3b3b3b;
+    overflow-x: hidden;
 }
 
-/* Navigation list styling */
-.nav-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+h1,h2,h3,h4 {
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+p {
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Universal container for all sections */
+.container {
+    max-width: 1200px; /* keeps content aligned, not touching edges */
+    margin: 0 auto;
+    padding: 0 20px; /* space on mobile */
+}
+
+/* Apply to Hero Section */
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    gap: 25px; /* space between items */
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.nav-links a {
-    text-decoration: line-through;
-    text-decoration: underline;
-    text-decoration: solid;
-    font-weight: bold;
-    text-decoration: none;
-    color: #0c503c;
-    font-family: 'Meie Script', cursive; /* <-- your Google font */
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+/* Apply to Luxury 90s Section */
+.luxury-90s .why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.nav-links a:hover {
-    color: #f005c9; /* accent color */
-}
-
-/* HEADER STYLES */
+/* === Header === */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: rgb(197, 241, 210);
-    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 50px;
+    background-color: #f1ede6;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.header .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #000;
-}
-
-.header .nav-links a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-.header .nav-links a:hover {
-    color: #26a69a; /* accent color */
-}
-
-.header .cta-btn {
-    background-color: #26a69a;
-    color: white;
-    border: none;
-    padding: 10px 22px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-.header .logo img{
-    height: 90px;
+.header .logo img {
+    height: 70px;
     width: auto;
 }
 
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
 
-/* HERO SECTION SIDE BY SIDE */
+.nav-links a {
+    text-decoration: none;
+    font-family: 'Meie Script', cursive;
+    font-size: 1.2rem;
+    color: #1f1f1f;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f005c9;
+    transform: translateY(-2px);
+}
+
+/* === Hero Section === */
+/* === Hero Section === */
 .hero-focus {
     width: 100%;
-    height: 50vh;
+    height: 50vh; /* reduced vertical height */
+    min-height: 400px; /* ensures it doesn’t get too small on big screens */
     overflow: hidden;
+    background: linear-gradient(160deg, #fdf6f0, #fefaf7);
+    display: flex;
+    align-items: center;
 }
 
 .hero-container {
     display: flex;
-    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    gap: 30px;
 }
 
-/* GIF takes 70% */
+/* GIF takes 65% width */
 .gif-bg {
-    flex: 7;
+    flex: 6.5;
 }
 
 .gif-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px; /* soft rounded corners for elegance */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    animation: float 6s ease-in-out infinite;
 }
 
-/* TEXT takes 30% */
+/* Text takes 35% width */
 .hero-focus-text {
-    flex: 3;
+    flex: 3.5;
     display: flex;
-    align-items: center;   /* vertical center */
-    justify-content: center;
-    padding: 40px;
-    background-color:rgb(243, 245, 244); 
+    align-items: center;
+    justify-content: flex-start; /* align text to left for more structured layout */
+    padding: 20px;
 }
 
-/* QUOTE STYLE */
 .hero-quote {
     font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    line-height: 1.8;
+    font-size: 1.5rem; /* slightly smaller for compact layout */
+    line-height: 1.7;
+    color: #1f1f1f;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s forwards;
+    animation-delay: 0.2s;
+}
+
+/* Script Words */
+.script {
+    font-family: 'Meie Script', cursive;
+    font-size: 2rem;
+    color: #eb96e6; /* subtle accent color */
+}
+/* === Why Section (CB Niche) === */
+.luxury-90s {
+    background: linear-gradient(160deg, #fdf6f0, #fefaf7);
+    padding: 50px 40px;
+    color: #3b3b3b;
+}
+
+.luxury-90s .why-content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 50px;
+}
+
+.cb-niche-title {
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s forwards;
+}
+
+.why-text, .why-text h3, .why-text p {
+    text-align: left;
+}
+
+.why-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 0.8s forwards;
+}
+
+.why-item:nth-child(1) { animation-delay: 0.3s; }
+.why-item:nth-child(2) { animation-delay: 0.5s; }
+.why-item:nth-child(3) { animation-delay: 0.7s; }
+
+.why-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounceIcon 2s infinite alternate;
+}
+
+@keyframes bounceIcon {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px) scale(1.05); }
+    100% { transform: translateY(0px); }
+}
+
+/* GIF on right */
+.why-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gif-wrapper {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.gif-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.pastel-overlay {
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    border-radius:50%;
+    background: rgba(253,236,225,0.25);
+    mix-blend-mode: soft-light;
+}
+
+/* Movement & More Section */
+.movement-section {
+    padding: 60px 20px;
+    background: #fdfaf7; /* light, soft Parisian vibe */
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.movement-title {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.movement-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #555;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.2s;
+}
+
+.services-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    position: relative;
+    flex: 1 1 280px;
+    max-width: 320px;
+    height: 400px; /* bigger card for background image */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* text at bottom */
+    padding: 20px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.service-card .service-icon {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.service-card .service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* makes image fill the card */
+    filter: brightness(0.7); /* darken a bit for text readability */
+    transition: transform 0.6s ease;
+}
+
+.service-card:hover .service-icon img {
+    transform: scale(1.1);
+}
+
+.service-card h3, .service-card p {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+}
+
+/* === Animations === */
+@keyframes fadeInLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Floating GIF === */
+@keyframes float {
+    0%,100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+    .luxury-90s .why-content {
+        flex-direction: column-reverse;
+        text-align: left;
+        gap: 40px;
+    }
+    .gif-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+/* ===== ABOUT / WHY IT WORKS SECTION ===== */
+.about-section {
+    background: #fffaf8;
+    padding: 70px 30px;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-header {
+    margin-bottom: 40px;
+}
+
+.about-title {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 2.9rem;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.about-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 40px;
+}
+
+.about-card {
+    background: #fbfaf9;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    padding: 25px 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-card:nth-child(1) { animation-delay: 0.3s; }
+.about-card:nth-child(2) { animation-delay: 0.5s; }
+.about-card:nth-child(3) { animation-delay: 0.7s; }
+.about-card:nth-child(4) { animation-delay: 0.9s; }
+
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.1);
+}
+
+.about-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #1f1f1f;
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    color: #4a4a4a;
+}
+
+/* ===== Animations reused ===== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== FOUNDER STORY SECTION (Split Layout) ===== */
+.founder-story {
+    background: #fdfcf8;
+    padding: 60px 20px;
     color: #222;
 }
 
-/* SCRIPT WORDS */
-.script {
-    font-family: 'Meie Script', cursive;
-    font-size: 2.2rem;
+.founder-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+/* Flex wrapper for text + image */
+.founder-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Text left */
+.founder-text {
+    flex: 1 1 500px;
+    text-align: left;
+}
+
+/* Image right */
+.founder-image {
+    flex: 1 1 350px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.founder-img-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.founder-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Float animation for image */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+/* Text animations */
+.founder-title {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: fadeInLeft 1s forwards;
+}
+
+.founder-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: fadeInLeft 1s forwards;
+    animation-delay: 0.3s;
+}
+
+.founder-content p,
+.founder-content blockquote {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 1s forwards;
+}
+
+.founder-content p { animation-delay: 0.5s; }
+.founder-content blockquote { 
+    font-style: italic;
+    border-left: 4px solid #f0d6c6;
+    padding-left: 15px;
+    margin-left: 0;
+    animation-delay: 0.7s;
+}
+
+/* Fade in left animation */
+@keyframes fadeInLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .founder-content-wrapper {
+        flex-direction: column-reverse;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .founder-img-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* === CTA Banner === */
+.cta-banner {
+    background-color: #fdf6f0; /* Soft Parisian cream */
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.cta-title {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.cta-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #3b3b3b;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #eacfc1; /* subtle pastel accent */
+    color: #1a1a1a;
+    font-weight: bold;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f0d6c6;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* === Footer === */
+.site-footer {
+    background-color: #fdf6f0;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #3b3b3b;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #3b3b3b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #eacfc1;
+}
+
+.footer-socials a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+    transform: scale(1.2);
+}
+
+.footer-socials img {
+    height: 24px;
+    width: 24px;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.testimonials-section {
+  background: #fdf6f0; /* light creamy Parisian feel */
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.testimonials-section .section-title {
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #fffaf8;
+  padding: 30px 25px;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.testimonial-card:nth-child(1){animation-delay:0.3s;}
+.testimonial-card:nth-child(2){animation-delay:0.5s;}
+.testimonial-card:nth-child(3){animation-delay:0.7s;}
+
+.testimonial-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #3b3b3b;
+}
+
+.testimonial-author {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1f1f1f;
+  font-style: italic;
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.blog-section {
+  background: #fff; 
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.blog-section .section-title {
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.blog-card {
+  background: #fffaf8;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 320px;
+  text-align: left;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.blog-card:nth-child(1){animation-delay:0.3s;}
+.blog-card:nth-child(2){animation-delay:0.5s;}
+.blog-card:nth-child(3){animation-delay:0.7s;}
+
+.blog-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card h3 {
+  font-size: 1.2rem;
+  margin: 15px;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  margin: 0 15px 15px 15px;
+  line-height: 1.5;
+  color: #3b3b3b;
+}
+
+.anatomy-section {
+  background: #fdf6f0;
+  padding: 60px 20px;
+}
+
+.anatomy-container {
+   max-width: 1200px;
+    margin: 0 auto;
+}
+
+.anatomy-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.anatomy-text .section-title {
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.anatomy-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #3b3b3b;
+}
+
+.anatomy-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.anatomy-circle {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  animation: float 6s ease-in-out infinite;
+}
+
+.anatomy-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+
+
