@@ -821,5 +821,50 @@ p {
 }
 
 
+/* CALCULATORS PAGE */
+
+.calc-hero {
+    background: #fdf6f0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.calc-hero h1 {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 2.5rem;
+}
+
+.calculator-section {
+    padding: 40px 20px;
+}
+
+.calc-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calc-card {
+    background: #fffaf8;
+    padding: 20px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.calc-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.calc-card button {
+    width: 100%;
+    padding: 10px;
+    background: #eacfc1;
+    border: none;
+    border-radius: 20px;
+}
 
 

@@ -109,13 +109,17 @@
             Come for the workouts, stay for the variety. From soothing sound baths and self-care practices to healthy recipes and meditations, find all your wellness needs here.
         </p>
         <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="{% static 'images/bmi.jpg' %}" alt="Health Calculators">
-                </div>
-                <h3>Health Calculators</h3>
-                <p>Calculate BMI, body fat, and more to track your wellness journey.</p>
+
+        <a href="{ % url 'calc' % }"></a>
+          <div class="service-card">
+            <div class="service-icon">
+            <img src="{% static 'images/bmi.jpg' %}" alt="Health Calculators">
             </div>
+           <h3>Health Calculators</h3>
+             <p>Calculate BMI, body fat, and more to track your wellness journey.</p>
+                 </div>
+                 </a>
+
             <div class="service-card">
                 <div class="service-icon">
                     <img src="{% static 'images/mind.jpg' %}" alt="Mindfulness Blogs">
@@ -123,6 +127,7 @@
                 <h3>Mindfulness Blogs</h3>
                 <p>Read tips, techniques, and stories to improve your mental wellness.</p>
             </div>
+
             <div class="service-card">
                 <div class="service-icon">
                     <img src="{% static 'images/running.jpg' %}" alt="Body Movements">
